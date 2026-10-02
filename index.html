@@ -10,14 +10,14 @@
 </head>
 <body>
     <!--this is an example-->
-
+    
     <!--Universal navigation for both versions of my website-->
 
-    
+    <div class="menu-backdrop" id="menu-backdrop" onclick="closeMobile()"></div>
     <nav id = "Uninav">
         <div class="Navholder">
             <div class="logo">
-                <h1>ALX GAMES</h1>
+                <h1 id="refreshButton">ALX GAMES</h1>
             </div>
 
         <!--actuall button-->
@@ -37,10 +37,10 @@
 
 
 
-    <!--this is a cool title of my name and all and then show a link of a video-->
+    <!--this is a cool title of my name and all and then show a link of a video change size of logo to like 1.5x-->
     <div id = "Bigpresentation">
         <div class="centerContainer">
-            <h1>ALX GAMES </h1>
+            <h1> WE ARE ALX GAMES </h1>
             <img class="roundyimg" src="images_assets/LOGO_Name.png">
             <h2>The second best game devs</h2>
         </div>
@@ -49,8 +49,7 @@
     <div id="Introductionvideo">
         <div class="centerContainer">
         <h1>A Very Serious Introduction</h1>
-        <iframe class="video" src="https://www.youtube.com/watch?v=BAx2GaMW2qA" ></iframe>
-        <h2>video down here</h2>
+        <iframe class="video" src="https://www.youtube.com/embed/BAx2GaMW2qA?si=6WaS0nzsCJYmQIaS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         </div>
     </div>
@@ -59,23 +58,75 @@
     <div id = "Projects">
         <div class="project">
 <h1>Games In Development</h1>
-<button class="GamesButton">
+<div class="gameflex">
+<button class="GamesButton" data-open-modal= "modal3">
+ <img src="images_assets/Beta_Logo.png" alt="">
+</button>
+<button class="GamesButton" data-open-modal= "modal4">
  <img src="images_assets/LOGO_Name.png" alt="">
 </button>
-<button class="GamesButton">
- <img src="images_assets/LOGO_Name.png" alt="">
-</button>
+</div>
+
+<dialog id="modal3">
+    <div class="modalwrapper">
+    <div class="modalheader">
+        <h2>PROJECT: AI KOI COLLEGE</h2>
+        <button data-close-modal>&times</button>
+    </div>
+    <div class="modalcontent">
+
+        <iframe src="" frameborder="0"></iframe>
+
+    </div>
+
+</div>
+</dialog>
+
+<dialog id="modal4">
+    <div class="modalwrapper">
+    <div class="modalheader">
+        <h2>PROJECT: THE NEW GOD LIKE FLOW</h2>
+        <button data-close-modal>&times</button>
+    </div>
+    <div class="modalcontent">
+
+
+    </d iv>
+
+</div>
+</dialog>
+
 
 
     </div>
-    <div class="project">
-<h1>Games Completed</h1>
-<button class="GamesButton">
+        <div class="project">
+<h1>Games completed</h1>
+<div class="gameflex">
+<button class="GamesButton" data-open-modal= "modal5">
+ <img src="images_assets/LOGO_Name.png" alt="">
+</button>
+<button class="GamesButton" data-open-modal= "modal5">
  <img src="images_assets/LOGO_Name.png" alt="">
 </button>
 
+</div>
 
     </div>
+
+<dialog id="modal5">
+    <div class="modalwrapper">
+    <div class="modalheader">
+        <h2>None yet....</h2>
+        <button data-close-modal>&times</button>
+    </div>
+    <div class="modalcontent">
+<h1>Sorry D: </h1>
+
+    </d iv>
+
+</div>
+</dialog>
+
 
 
 
@@ -85,10 +136,10 @@
                     <div class="flexholder">
                 <div>
             <h1>Who are WE?</h1>
-            <p>My name is Alex and I am the creator of ALX GAMES. The most niche and random games come from me.</p>
+            <h2>My name is Alex and I am the creator of ALX GAMES. The most niche and random games come from me.</h2>
     </div>
     <div class="imgwrapper">
-            <img src="images_assets/LOGO_Name.png" alt="">
+            <img class="roundyimg" src="images_assets/LOGO_Name.png" alt="">
             </div>
         </div>
         </div>
@@ -99,11 +150,11 @@
     <div id = "Aboutme">
         <div class="container">
             <div class="flexholder"> 
-                <div>
-                <img src="images_assets/LOGO_Name.png" alt="">
+                <div class="imgwrapper">
+                <img class="roundyimg" src="images_assets/LOGO_Name.png" alt="">
                 </div>
                 <div>
-                    <h1>About me and Resume </h1>
+                    <h1>About the creator</h1>
             <h2>My name is Alex and I am the creator of ALX GAMES. The most niche and random games come from me.</h2>
             </div>
 </div>
@@ -113,18 +164,58 @@
 
 
 
-
+<!---
     <div id = "resume">
         <div class="container">
+            <h1 class="centerertext">The resume</h1>
             <div class="flexpadding"> 
-<button class="custombutton">BEST Resume</button>
-<button class="custombutton">Boring Resume</button>
+
+<button class="custombutton" data-open-modal= "modal2">BEST Resume</button>
+
+<dialog id="modal2">
+    <div class="modalwrapper">
+    <div class="modalheader">
+        <h2>The BEST i frame here</h2>
+        <button data-close-modal>exit</button>
+    </div>
+    <div class="modalcontent">
+
+        <iframe src="" frameborder="0"></iframe>
+
+    </div>
+
+</div>
+</dialog>
+
+
+
+
+<button class="custombutton" data-open-modal= "modal1">Boring Resume</button>
+
+<dialog id="modal1">
+    <div class="modalwrapper">
+    <div class="modalheader">
+        <h1>You really chose basic</h1>
+        <button data-close-modal>exit</button>
+    </div>
+    <div class="modalcontent">
+
+        <img src="images_assets\Copy of boring resume but less details.png">
+
+    </div>
+
+</div>
+</dialog>
+
+</div>
+</div>
+
     </div>
         </div>
     </div>
 
 
-
+--->
 
 
     <!--Dev logs that are in detail or have cool info about the games -->
@@ -142,7 +233,7 @@
     <div class="container">
         <div class="basecenter">
             <h1>The Forgotten</h1>
-        <h1>grid or list of dead projects that I did not finish</h1>
+        <h1>grid or list of dead projects that I did not finish Make as new page</h1>
 </div>
 </div>
 </div>
@@ -152,24 +243,24 @@
 <div id="collage">
     <div class="container">
         <div class="basecenter">
-            <h1>My Collage</h1>
-        <h1>collage as a grid 4x4</h1>
+            <h1>My Collage 60 04 tnee knew game </h1>
+        <h1>collage as a grid 4x4 do in godot</h1>
 </div>
 </div>
 </div>
 
 
  <!--copyrights and socials and contacts-->
-<footer>
+<footer class="bottompart">
     <!--make these links buttons instead where if you hover over them they change colors and have a unique image -->
-    <p>ALX GAMES </p>
-  <p style="margin-top:0.5rem">
+    <h1>ALX GAMES </h1>
+  <h3 style="margin-top:0.5rem">
     <a href="main.html">donations</a>
     <a href="blogpage.html">Instagram</a>
     <a href="aboutpage.html">youtube</a>
     <a href="guidepage.html">Tiktok</a>
-  </p>
-  <p style="margin-top:1rem;font-size:0.75rem">© 2026 ALX GAMES. Built with true trial and error.</p>
+  </h3>
+  <h3 style="margin-top:1rem;font-size:0.75rem">© 2026 ALX GAMES. Built with true trial and error.</h>
 </footer>
 
 
